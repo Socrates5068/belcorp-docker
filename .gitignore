@@ -1,0 +1,6 @@
+# Ignore banckend and frontend folders
+/belcorp-backend
+/belcorp-frontend
+
+# Ignore env variables
+.env

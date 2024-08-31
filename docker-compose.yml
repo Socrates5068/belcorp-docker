@@ -1,0 +1,63 @@
+services:
+  mongodb:
+    image: mongo:5.0.2
+    restart: unless-stopped
+    env_file: ./.env
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=$DB_USER
+      - MONGO_INITDB_ROOT_PASSWORD=$DB_PASSWORD
+    ports:
+      - $MONGODB_LOCAL_PORT:$MONGODB_DOCKER_PORT
+    volumes:
+      - db:/data/db
+      - ./scripts/mongo-init:/docker-entrypoint-initdb.d
+    networks:
+      - backend
+
+  belcorp-backend:
+    depends_on:
+      - mongodb
+    build: ./belcorp-backend
+    restart: unless-stopped
+    volumes:
+      - ./belcorp-backend/src:/usr/src/belcorp-backend/src
+    env_file: ./.env
+    ports:
+      - $NODE_LOCAL_PORT:$NODE_DOCKER_PORT
+    environment:
+      - DB_HOST=$DB_HOST
+      - DB_USER=$DB_USER
+      - DB_PASSWORD=$DB_PASSWORD
+      - DB_NAME=$DB_NAME
+      - DB_PORT=$DB_PORT
+      - FRONTEND_URL=$FRONTEND_URL
+      - SMTP_HOST=$SMTP_HOST
+      - SMTP_PORT=$SMTP_PORT
+      - SMTP_USER=$SMTP_USER
+      - SMTP_PASS=$SMTP_PASS
+    networks:
+      - backend
+      - frontend
+
+  belcorp-frontend:
+    depends_on:
+      - belcorp-backend
+    build:
+      context: ./belcorp-frontend
+    restart: unless-stopped
+    ports:
+      - $REACT_LOCAL_PORT:$REACT_DOCKER_PORT
+    volumes:
+      - ./belcorp-frontend/src:/usr/src/belcorp-frontend/src
+    environment:
+      - VITE_BACKEND_API_URL=$VITE_BACKEND_API_URL
+      - NODE_ENV=development
+    networks:
+      - frontend
+
+volumes: 
+  belcorp_db:
+
+networks:
+  backend:
+  frontend:

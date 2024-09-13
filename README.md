@@ -21,6 +21,11 @@ Start the containers with Docker Compose:
 docker compose up -d
 ```
 
+Start the containers with Docker Compose:
+```sh
+docker compose down
+```
+
 ## Installation on MacOs (soon)
 
 ## License

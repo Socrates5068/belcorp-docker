@@ -11,6 +11,8 @@ db.users.insertOne({
   email: "admin@admin.com",
   password: "$2b$10$NVE8eumZgdzTTpfxayy1peXDD8dduhnqi1F9luUvDVlpRZEetdmqS",
   name: "admin",
+  last_name: "admin",
+  ci: '11111111',
   confirmed: true,
   status: "Active",
   __v: 0

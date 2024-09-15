@@ -18,7 +18,7 @@ git clone $backend
 git clone $frontend
 
 Write-Host "Repositories was cloned"
-Write-Host "Installing dependencies..."
+<# Write-Host "Installing dependencies..."
 
 # Install dependencies
 $backendPath = Join-Path $path "belcorp-backend"
@@ -34,9 +34,9 @@ Set-Location -Path $frontendPath
 npm install
 Write-Host "Dependencies installed for frontend"
 
-Set-Location ..
+Set-Location .. #>
 
 Write-Host "Finished."
 
 # Return to original path
-Set-Location -Path $path
+#Set-Location -Path $path

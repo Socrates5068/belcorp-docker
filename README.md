@@ -28,6 +28,18 @@ docker compose down
 
 ## Installation on MacOs (soon)
 
+## Other helpfull commands
+
+In order to reset DB
+```sh
+docker compose down -v
+```
+
+To build app after install a new dependenci
+```sh
+docker compose up -d --build
+```
+
 ## License
 
 MIT

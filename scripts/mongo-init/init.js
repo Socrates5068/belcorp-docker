@@ -43,7 +43,7 @@ db.users.insertMany([
     ci: '33333333',
     confirmed: true,
     status: "Active",
-    roles: ['Lider'],
+    roles: ['Socia'],
     section: ObjectId("67074da53185f2757e115ada"),
     __v: 0
   },

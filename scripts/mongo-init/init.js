@@ -106,3 +106,119 @@ db.sections.insertMany([
     description: "Descripción de la sección H",
   }
 ]);
+
+// Creamos la colección "campaigns"
+db.createCollection('campaigns');
+
+// Insertamos 18 documentos en la colección "campaigns"
+db.campaigns.insertMany([
+  {
+    _id: ObjectId("6719aae648d430afae4f7ab5"),
+    name: "Campaña 1",
+    startDate: "2024-10-01T00:00:00Z",
+    endDate: "2024-11-01T00:00:00Z"
+  },
+  {
+    _id: ObjectId(),
+    name: "Campaña 2",
+    startDate: "2024-10-02T00:00:00Z",
+    endDate: "2024-11-02T00:00:00Z"
+  },
+  {
+    _id: ObjectId(),
+    name: "Campaña 3",
+    startDate: "2024-10-03T00:00:00Z",
+    endDate: "2024-11-03T00:00:00Z"
+  },
+  {
+    _id: ObjectId(),
+    name: "Campaña 4",
+    startDate: "2024-10-04T00:00:00Z",
+    endDate: "2024-11-04T00:00:00Z"
+  },
+  {
+    _id: ObjectId(),
+    name: "Campaña 5",
+    startDate: "2024-10-05T00:00:00Z",
+    endDate: "2024-11-05T00:00:00Z"
+  },
+  {
+    _id: ObjectId(),
+    name: "Campaña 6",
+    startDate: "2024-10-06T00:00:00Z",
+    endDate: "2024-11-06T00:00:00Z"
+  },
+  {
+    _id: ObjectId(),
+    name: "Campaña 7",
+    startDate: "2024-10-07T00:00:00Z",
+    endDate: "2024-11-07T00:00:00Z"
+  },
+  {
+    _id: ObjectId(),
+    name: "Campaña 8",
+    startDate: "2024-10-08T00:00:00Z",
+    endDate: "2024-11-08T00:00:00Z"
+  },
+  {
+    _id: ObjectId(),
+    name: "Campaña 9",
+    startDate: "2024-10-09T00:00:00Z",
+    endDate: "2024-11-09T00:00:00Z"
+  },
+  {
+    _id: ObjectId(),
+    name: "Campaña 10",
+    startDate: "2024-10-10T00:00:00Z",
+    endDate: "2024-11-10T00:00:00Z"
+  },
+  {
+    _id: ObjectId(),
+    name: "Campaña 11",
+    startDate: "2024-10-11T00:00:00Z",
+    endDate: "2024-11-11T00:00:00Z"
+  },
+  {
+    _id: ObjectId(),
+    name: "Campaña 12",
+    startDate: "2024-10-12T00:00:00Z",
+    endDate: "2024-11-12T00:00:00Z"
+  },
+  {
+    _id: ObjectId(),
+    name: "Campaña 13",
+    startDate: "2024-10-13T00:00:00Z",
+    endDate: "2024-11-13T00:00:00Z"
+  },
+  {
+    _id: ObjectId(),
+    name: "Campaña 14",
+    startDate: "2024-10-14T00:00:00Z",
+    endDate: "2024-11-14T00:00:00Z"
+  },
+  {
+    _id: ObjectId(),
+    name: "Campaña 15",
+    startDate: "2024-10-15T00:00:00Z",
+    endDate: "2024-11-15T00:00:00Z"
+  },
+  {
+    _id: ObjectId(),
+    name: "Campaña 16",
+    startDate: "2024-10-16T00:00:00Z",
+    endDate: "2024-11-16T00:00:00Z"
+  },
+  {
+    _id: ObjectId(),
+    name: "Campaña 17",
+    startDate: "2024-10-17T00:00:00Z",
+    endDate: "2024-11-17T00:00:00Z"
+  },
+  {
+    _id: ObjectId(),
+    name: "Campaña 18",
+    startDate: "2024-10-18T00:00:00Z",
+    endDate: "2024-11-18T00:00:00Z"
+  }
+]);
+

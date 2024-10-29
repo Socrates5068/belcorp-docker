@@ -25,3 +25,10 @@ function Update-Repo {
 # Actualizar los repositorios
 Update-Repo "belcorp-backend"
 Update-Repo "belcorp-frontend"
+
+if (Test-Path ".git") {
+    git pull origin main  # o reemplaza 'main' con la rama adecuada
+    Write-Output "Repositorio en $dir actualizado correctamente."
+}
+
+Pause

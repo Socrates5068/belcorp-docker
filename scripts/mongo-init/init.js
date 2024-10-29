@@ -16,6 +16,10 @@ db.users.insertMany([
     ci: '11111111',
     confirmed: true,
     roles: ["Administrador"],
+    permissions: [
+      "CreateUser",
+      "EditUser",
+    ],
     section: ObjectId("67074da53185f2757e115ada"),
     status: "Active",
     password: "$2b$10$19.Har5WsG3Av7TFWtObouOvI197QrwcDP09XEpq6Y7t4Y37bWPGC",
@@ -29,6 +33,15 @@ db.users.insertMany([
     ci: '22222222',
     confirmed: true,
     roles: ['Gerente'],
+    permissions: [
+      'CreateUser',
+      'EditUser',
+      'EditCampaign',
+      'EditSection',
+      'CreateDocument',
+      'EditDocument',
+      'DeleteDocument'
+    ],
     section: ObjectId("67074da53185f2757e115ada"),
     status: "Active",
     password: "$2b$10$LnE1Tk7JDc7On.wZAud2xOJxjXa9Gm7dpOud8xzMr2KMoyGI8u6Fu",
@@ -44,6 +57,7 @@ db.users.insertMany([
     confirmed: true,
     status: "Active",
     roles: ['Socia'],
+    permissions: [],
     section: ObjectId("67074da53185f2757e115ada"),
     __v: 0
   },
@@ -57,6 +71,7 @@ db.users.insertMany([
     confirmed: true,
     status: "Active",
     roles: ['Consultora'],
+    permissions: [],
     section: ObjectId("67074da53185f2757e115ada"),
     __v: 0
   }
